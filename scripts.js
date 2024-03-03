@@ -46,6 +46,9 @@ function buttonClick(event) {
     case "mod":
       percentage();
       break;
+    case "decimal":
+      decimal(value);
+      break;
   }
 
   //update the display
@@ -124,4 +127,8 @@ function percentage() {
     //if expression id empty but the result exist divide by 100.
     result = parseFloat(result) / 100;
   }
+}
+
+function decimal(){
+
 }
