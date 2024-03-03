@@ -1,37 +1,62 @@
-body{
-    height: 100vh;
-    margin:0;
-    font-family: 'sans-serif';
-    display:flex;
-    flex-direction: column;
-    background-color: black;
-    color: white;
-
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "sans-serif";
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
 }
 
-section{
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    padding: 10px;
-    font-size: 40px;
-    font-weight: 300;
+section {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: 10px;
+  font-size: 40px;
+  font-weight: 300;
 }
 
-#output{
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 15px;
+#output {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 15px;
 }
 
-.btn{
-    flex-basis: calc(25% - 10px);
-    margin: 5px;
-    border: 0;
-    font-size: 32px;
-    height: 72px;
-    border-radius: 24px;
-    cursor: pointer;
-    color: white;
+.btn {
+  flex-basis: calc(25% - 10px);
+  margin: 5px;
+  border: 0;
+  font-size: 32px;
+  height: 72px;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.light,
+light:focus {
+  background-color: #4e505f;
+}
+
+.light:hover {
+  background-color: #8890a5;
+}
+
+.blue,
+.blue:focus {
+  background-color: #4b5efc;
+}
+
+.blue:hover {
+  background-color: #789bf9;
+}
+.dark,
+.dark:focus {
+  background-color: #2e2f38;
+}
+
+.dark:hover {
+  background-color: #505266;
 }
