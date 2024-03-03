@@ -78,7 +78,7 @@ light:focus {
     /*Adjust button layout for small screens */
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 15px;
-    margin-right: 5px;
+    align-items: center;
     /* Ensure the input section remains visible above the bottom navigation */
     position: fixed;
     bottom: 0;
