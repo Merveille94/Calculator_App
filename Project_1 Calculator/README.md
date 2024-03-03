@@ -1,6 +1,3 @@
-Certainly! Here's a sample README description you can use for your calculator project on GitHub:
-
----
 
 # Calculator App
 
