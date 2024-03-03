@@ -40,6 +40,9 @@ function buttonClick(event) {
     case "submit":
       submit();
       break;
+    case "negate":
+      negate();
+      break;
   }
 
   //update the display
@@ -72,7 +75,7 @@ function isLastCharOperator() {
   return isNaN(parseInt(expression.slice(-1)));
 }
 
-function startFromResult() {
+function startFromResult(value) {
   expression += result + value;
 }
 
@@ -89,4 +92,17 @@ function evluateExpression() {
     : evalResult < 1
     ? parseFloat(evalResult.toFixed(10))
     : parseFloat(evalResult.toFixed(2));
+}
+
+function negate() {
+  //negate the result if expression empty and result is present
+  if (expression === "" && result !== "") {
+    result = -result;
+    //toggle the sign of the expression if it is not negeative and not empty
+  } else if (!expression.startsWith("-") && expression !== "") {
+    expression = "-" + expression;
+    //remove the negative sign from the expression if it is already negative
+  } else if(expression.startsWith('-')){
+    expression = expression.slice(1);
+  }
 }
