@@ -69,15 +69,15 @@ light:focus {
 @media only screen and (max-width: 600px) and (orientation: portrait) {
   body {
     height: calc(
-      100vh - 40px
+      100vh - 65px
     ); /* Subtract padding-bottom to fit within viewport */
     font-family: "sans-serif";
     display: flex;
     flex-direction: column;
     background-color: black;
     color: white;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
+    margin-bottom: 65px;
+    padding-bottom: 65px;
     margin: 0; /* Remove default body margin */
     overflow-y: hidden; /* Hide vertical overflow */
   }
