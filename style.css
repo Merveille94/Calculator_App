@@ -76,7 +76,7 @@ light:focus {
     flex-direction: column;
     background-color: black;
     color: white;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     padding-bottom: 20px;
     margin: 0; /* Remove default body margin */
     overflow-y: hidden; /* Hide vertical overflow */
