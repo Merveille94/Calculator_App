@@ -97,6 +97,7 @@ light:focus {
     align-items: flex-end;
     gap: 7px;
   }
+
   .btn {
     flex-basis: calc(25% - 6px);
     margin: 3px;
