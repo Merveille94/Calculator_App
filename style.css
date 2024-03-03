@@ -65,10 +65,6 @@ section {
   background-color: #505266;
 }
 
-button.btn {
-  -webkit-tap-highlight-color: transparent;
-}
-
 /* Media query for small screens */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
   body {
