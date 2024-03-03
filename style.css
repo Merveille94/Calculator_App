@@ -68,49 +68,37 @@ light:focus {
 /* Media query for small screens */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
   body {
-    padding-bottom: 60px; 
-  }
-
-  #output {
-    font-size: 16px;
-  }
-
-  #input {
-    grid-template-columns: repeat(4, 1fr);
-    margin-bottom: 16px;
-    left: 0;
+    height: 100vh;
+    font-family: "sans-serif";
     display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 9999; 
-    margin: 0;
-    padding: 0;
+    flex-direction: column;
+    background-color: black;
+    color: white;
   }
-
-  .btn {
-    padding: 10px;
-    font-size: 20px;
-  }
-}
-
-/* Media query for watches */
-@media only screen and (max-width: 320px) {
-  #output {
-    font-size: 15px;
-  }
-
-  #input {
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0;
-    padding: 0;
+  
+  section {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 5px;
+    font-size: 25px;
+    font-weight: 150;
   }
-
+  
+  #output {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 7px;
+  }
   .btn {
-    padding: 8px;
+    flex-basis: calc(25% - 6px);
+    margin: 3px;
+    border: 0;
     font-size: 15px;
-  }
+    height: 72px;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+  }  
 }
