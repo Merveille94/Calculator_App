@@ -86,8 +86,13 @@ function addValue(value) {
 }
 
 function updateDisplay(expression, result) {
-  expressionDiv.textContent = expression;
-  resultDiv.textContent = result;
+  // Truncate expression and result if they exceed 21 characters
+  const truncatedExpression =
+    expression.length > 21 ? expression.slice(0, 21) : expression;
+  const truncatedResult = result.length > 21 ? result.slice(0, 21) : result;
+
+  expressionDiv.textContent = truncatedExpression;
+  resultDiv.textContent = truncatedResult;
 }
 
 function clear() {
