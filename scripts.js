@@ -36,6 +36,10 @@ function buttonClick(event) {
       } else if (expression !== "" && !isLastCharOperator()) {
         addValue(value);
       }
+      break;
+    case "submit":
+      submit();
+      break;
   }
 
   //update the display
@@ -66,4 +70,23 @@ function backspace() {
 
 function isLastCharOperator() {
   return isNaN(parseInt(expression.slice(-1)));
+}
+
+function startFromResult() {
+  expression += result + value;
+}
+
+function submit() {
+  result = evluateExpression();
+  expression = "";
+}
+
+function evluateExpression() {
+  const evalResult = eval(expression);
+  //check if evalResult isNaN or isfinite. If it is return a space character ''
+  return isNaN(evalResult) || !isFinite(evalResult)
+    ? ""
+    : evalResult < 1
+    ? parseFloat(evalResult.toFixed(10))
+    : parseFloat(evalResult.toFixed(2));
 }
