@@ -1,6 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100vh;
-  margin: 0;
   font-family: "sans-serif";
   display: flex;
   flex-direction: column;
@@ -86,6 +90,8 @@ light:focus {
     bottom: 0;
     width: 100%;
     z-index: 9999; /* Ensure it's above other content */
+    margin: 0;
+    padding: 0;
   }
 
   .btn {
@@ -105,6 +111,10 @@ light:focus {
   #input {
     /* Further adjust button layout for watches */
     grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .btn {
