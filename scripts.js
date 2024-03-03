@@ -86,11 +86,11 @@ function startFromResult(value) {
 }
 
 function submit() {
-  result = evluateExpression();
+  result = evaluateExpression();
   expression = "";
 }
 
-function evluateExpression() {
+function evaluateExpression() {
   const evalResult = eval(expression);
   //check if evalResult isNaN or isfinite. If it is return a space character ''
   return isNaN(evalResult) || !isFinite(evalResult)
@@ -116,7 +116,7 @@ function negate() {
 function percentage() {
   //evaluate the expression else it will take the percentage of only the first number
   if (expression !== "") {
-    result = evluateExpression();
+    result = evaluateExpression();
     expression = "";
     if (!isNaN(result) && isFinite(result)) {
       result /= 100;
@@ -129,6 +129,8 @@ function percentage() {
   }
 }
 
-function decimal(){
-
+function decimal(value){
+    if(!expression.endsWith('.') && !isNaN(expression.slice(-1))){
+        addValue(value);
+    }
 }
