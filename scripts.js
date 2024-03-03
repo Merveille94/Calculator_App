@@ -17,11 +17,14 @@ function buttonClick(event) {
 
   //Switch case to control the calculator
   switch (action) {
-    case 'number':
+    case "number":
       addValue(value);
       break;
-    case 'clear':
+    case "clear":
       clear();
+      break;
+    case "backspace":
+      backspace();
       break;
   }
 
@@ -45,4 +48,8 @@ function updateDisplay(expression, result) {
 function clear() {
   expression = "";
   result = " ";
+}
+
+function backspace() {
+  expression = expression.slice(0, -1);
 }
