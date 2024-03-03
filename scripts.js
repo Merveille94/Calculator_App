@@ -26,6 +26,16 @@ function buttonClick(event) {
     case "backspace":
       backspace();
       break;
+      //Add result as the starting point is the expression is empty
+      case 'addition':
+      case 'substraction':
+      case 'multiplication':
+      case 'division':
+        if (expression === '' && result !== '' ) {
+            startFromResult(value)
+        } else if (expression !== '' && !isLastCharOperator()){
+            addValue(value);
+        }
   }
 
   //update the display
