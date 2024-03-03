@@ -64,6 +64,10 @@ light:focus {
 /* Media query for small screens */
 @media only screen and (max-width: 600px) {
   /* Adjust styles for small screens here */
+  body {
+    overflow-y: hidden;
+  }
+
   #output {
     /*Reduce font size for output display on small screens */
     font-size: 16px;
@@ -72,13 +76,13 @@ light:focus {
   #input {
     /*Adjust button layout for small screens */
     grid-template-columns: repeat(4, 1fr);
-    padding-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .btn {
     /* Reduce button size for small screens */
     padding: 10px;
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -97,6 +101,6 @@ light:focus {
   .btn {
     /* Further reduce button size for watches */
     padding: 8px;
-    font-size: 14px;
+    font-size: 15px;
   }
 }
