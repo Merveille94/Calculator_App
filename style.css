@@ -77,7 +77,7 @@ light:focus {
   #input {
     /*Adjust button layout for small screens */
     grid-template-columns: repeat(4, 1fr);
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     left: 0;
     display: flex;
     justify-content: center;
@@ -91,7 +91,7 @@ light:focus {
   .btn {
     /* Reduce button size for small screens */
     padding: 10px;
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
