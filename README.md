@@ -1,11 +1,13 @@
 
 # Calculator App
 
-<img src="/Project_1 Calculator/1.png"/>
+<img src="1.png"/>
 
 ## Description
 
 This is a simple calculator web application built using HTML, CSS, and JavaScript. It provides basic arithmetic operations such as addition, subtraction, multiplication, and division, along with other functionalities like clearing the screen, backspacing, and decimal input.
+
+<img src="3.png">
 
 ## Features
 
@@ -27,7 +29,7 @@ This is a simple calculator web application built using HTML, CSS, and JavaScrip
 
 ## Screenshots
 
-<img src="/Project_1 Calculator/2.png" alt ="screenschot">
+<img src="2.png" alt ="screenschot">
 
 ## Contributing
 
