@@ -67,19 +67,20 @@ light:focus {
 
 /* Media query for small screens */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
-
   body {
-    height: calc(100vh - 10px); /* Subtract padding-bottom to fit within viewport */
+    height: calc(
+      100vh - 10px
+    ); /* Subtract padding-bottom to fit within viewport */
     font-family: "sans-serif";
     display: flex;
     flex-direction: column;
     background-color: black;
     color: white;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     margin: 0; /* Remove default body margin */
     overflow-y: hidden; /* Hide vertical overflow */
   }
-  
+
   section {
     display: flex;
     flex-wrap: wrap;
@@ -88,7 +89,7 @@ light:focus {
     font-size: 25px;
     font-weight: 150;
   }
-  
+
   #output {
     flex-direction: column;
     justify-content: flex-end;
@@ -104,5 +105,5 @@ light:focus {
     border-radius: 24px;
     cursor: pointer;
     color: white;
-  }  
+  }
 }
