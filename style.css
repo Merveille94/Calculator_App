@@ -67,35 +67,29 @@ light:focus {
 
 /* Media query for small screens */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
-  /* Adjust styles for small screens here */
   body {
-    /* Give some padding at the bottom to avoid overlapping with bottom navigation */
-    padding-bottom: 60px; /* Adjust the value as needed */
+    padding-bottom: 60px; 
   }
 
   #output {
-    /*Reduce font size for output display on small screens */
     font-size: 16px;
   }
 
   #input {
-    /*Adjust button layout for small screens */
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 16px;
     left: 0;
     display: flex;
     justify-content: center;
-    /* Ensure the input section remains visible above the bottom navigation */
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 9999; /* Ensure it's above other content */
+    z-index: 9999; 
     margin: 0;
     padding: 0;
   }
 
   .btn {
-    /* Reduce button size for small screens */
     padding: 10px;
     font-size: 20px;
   }
@@ -104,12 +98,10 @@ light:focus {
 /* Media query for watches */
 @media only screen and (max-width: 320px) {
   #output {
-    /* Further reduce font size for output display on watches */
     font-size: 15px;
   }
 
   #input {
-    /* Further adjust button layout for watches */
     grid-template-columns: repeat(3, 1fr);
     margin: 0;
     padding: 0;
@@ -118,7 +110,6 @@ light:focus {
   }
 
   .btn {
-    /* Further reduce button size for watches */
     padding: 8px;
     font-size: 15px;
   }
