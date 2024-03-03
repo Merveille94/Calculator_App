@@ -26,16 +26,16 @@ function buttonClick(event) {
     case "backspace":
       backspace();
       break;
-      //Add result as the starting point is the expression is empty
-      case 'addition':
-      case 'substraction':
-      case 'multiplication':
-      case 'division':
-        if (expression === '' && result !== '' ) {
-            startFromResult(value)
-        } else if (expression !== '' && !isLastCharOperator()){
-            addValue(value);
-        }
+    //Add result as the starting point is the expression is empty
+    case "addition":
+    case "substraction":
+    case "multiplication":
+    case "division":
+      if (expression === "" && result !== "") {
+        startFromResult(value);
+      } else if (expression !== "" && !isLastCharOperator()) {
+        addValue(value);
+      }
   }
 
   //update the display
@@ -62,4 +62,8 @@ function clear() {
 
 function backspace() {
   expression = expression.slice(0, -1);
+}
+
+function isLastCharOperator() {
+  return isNaN(parseInt(expression.slice(-1)));
 }
