@@ -27,7 +27,7 @@ This is a simple calculator web application built using HTML, CSS, and JavaScrip
 
 ## Screenshots
 
-<img src="/Project_1 Calculator/2.png"/>
+<img src="/Project_1 Calculator/2.png" alt ="screenschot">
 
 ## Contributing
 
