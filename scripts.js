@@ -161,3 +161,11 @@ function decimal(value) {
     addValue(value);
   }
 }
+
+// Prevent tap highlighting
+document.querySelectorAll('.btn').forEach(button => {
+  button.addEventListener('touchstart', function(event) {
+      // Prevent default tap highlighting
+      this.style.webkitTapHighlightColor = 'transparent';
+  });
+});
