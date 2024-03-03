@@ -60,3 +60,44 @@ light:focus {
 .dark:hover {
   background-color: #505266;
 }
+
+
+/* Media query for small screens */
+@media only screen and (max-width: 600px) {
+  /* Adjust styles for small screens here */
+  #output {
+      /*Reduce font size for output display on small screens */
+      font-size: 16px;
+  }
+
+  #input {
+      /*Adjust button layout for small screens */
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  .btn {
+      /* Reduce button size for small screens */
+      padding: 10px;
+      font-size: 14px;
+  }
+}
+
+/* Media query for watches */
+@media only screen and (max-width: 320px) {
+  
+  #output {
+      /* Further reduce font size for output display on watches */
+      font-size: 14px;
+  }
+
+  #input {
+      /* Further adjust button layout for watches */
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  .btn {
+      /* Further reduce button size for watches */
+      padding: 8px;
+      font-size: 12px;
+  }
+}
