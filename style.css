@@ -62,10 +62,11 @@ light:focus {
 }
 
 /* Media query for small screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) and (orientation: portrait) {
   /* Adjust styles for small screens here */
   body {
-    overflow-y: hidden;
+    /* Give some padding at the bottom to avoid overlapping with bottom navigation */
+    padding-bottom: 60px; /* Adjust the value as needed */
   }
 
   #output {
@@ -77,6 +78,12 @@ light:focus {
     /*Adjust button layout for small screens */
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 15px;
+    /* Ensure the input section remains visible above the bottom navigation */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Ensure it's above other content */
   }
 
   .btn {
