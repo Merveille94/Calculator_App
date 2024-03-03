@@ -58,9 +58,31 @@ function buttonClick(event) {
 inputBox.addEventListener("click", buttonClick);
 
 function addValue(value) {
-  //Add value to the expression
-  expression += value;
-  //   console.log(expression);
+  if (value === ".") {
+    //find the index of the operator in the expression.
+    const lastOperatorIndex = expression.search(/[+\-*/]/);
+    //find the index of the decimal in the expression.
+    const lastDecimalIndex = expression.lastIndexOf(".");
+    //find the index of the last number in the expression.
+    const lastNumberIndex = Math.max(
+      expression.lastIndexOf("+"),
+      expression.lastIndexOf("-"),
+      expression.lastIndexOf("/"),
+      expression.lastIndexOf("*")
+    );
+    //check if this is the first decimal in the current expression or this is empty
+    if (
+      (lastDecimalIndex < lastOperatorIndex ||
+        lastDecimalIndex < lastNumberIndex ||
+        lastDecimalIndex === -1) &&
+      (expression === "" ||
+        expression.slice(lastNumberIndex + 1).indexOf("-") === -1)
+    ) {
+      expression += value;
+    }
+  } else {
+    expression += value;
+  }
 }
 
 function updateDisplay(expression, result) {
@@ -129,8 +151,8 @@ function percentage() {
   }
 }
 
-function decimal(value){
-    if(!expression.endsWith('.') && !isNaN(expression.slice(-1))){
-        addValue(value);
-    }
+function decimal(value) {
+  if (!expression.endsWith(".") && !isNaN(expression.slice(-1))) {
+    addValue(value);
+  }
 }
